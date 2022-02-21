@@ -1,7 +1,95 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
+    margin: 0 auto;
+    color: #3f464d;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+a {
+    all: unset;
+}
+
+/* 방문하지 않은 링크 */
+a:link {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+/* 방문한 링크 */
+a:visited {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+/* 클릭한 상태 */
+a:active {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* 스크롤 해도 헤더는 왼족 최상단 고정 */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: fixed; /* 고정 */
+    /* 왼쪽 최상단 */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.head-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-container .header-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.head-container .header-brand a:hover {
+    color: #2186c4;
+    cursor: pointer;
+}
+
+.head-container .header-blog {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.head-container .header-blog a:hover {
+    color: #2186c4;
+    cursor: pointer;
+}
+
+section {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+/* 최소 넓이가 1200px 이상일 때 */
+@media only screen and (min-width: 1200px) {
+    .inner {
+        max-width: 1200px;
+    }
 }
